@@ -124,15 +124,26 @@ st.markdown("---")
 
 # Sidebar untuk navigasi
 st.sidebar.title("Menu Navigasi")
-menu_options = [
-    "Dashboard Utama",
-    "Analisis Penjualan",
-    "Manajemen Inventory",
-    "Forecasting Demand",
-    "Analisis Supplier",
-    "Laporan Keuangan"
-]
-selected_menu = st.sidebar.selectbox("Pilih Menu", menu_options)
+# Sidebar navigasi dengan tombol
+menu_options = {
+    "Dashboard Utama": "📈 Dashboard Utama",
+    "Analisis Penjualan": "📊 Analisis Penjualan",
+    "Manajemen Inventory": "📦 Manajemen Inventory",
+    "Forecasting Demand": "🔮 Forecasting Demand",
+    "Analisis Supplier": "🏭 Analisis Supplier",
+    "Laporan Keuangan": "💰 Laporan Keuangan"
+}
+
+# Simpan menu aktif di session_state
+if "selected_menu" not in st.session_state:
+    st.session_state.selected_menu = "Dashboard Utama"
+
+for key, label in menu_options.items():
+    if st.sidebar.button(label, use_container_width=True):
+        st.session_state.selected_menu = key
+
+selected_menu = st.session_state.selected_menu
+
 
 # Dashboard Utama
 if selected_menu == "Dashboard Utama":
@@ -515,4 +526,5 @@ st.markdown(
     </div>
     """,
     unsafe_allow_html=True
+
 )
