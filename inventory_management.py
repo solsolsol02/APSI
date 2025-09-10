@@ -10,7 +10,6 @@ warnings.filterwarnings('ignore')
 # Konfigurasi halaman
 st.set_page_config(
     page_title="Sistem Manajemen Inventory & PPIC",
-    page_icon="📊",
     layout="wide",
     initial_sidebar_state="expanded"
 )
@@ -126,12 +125,12 @@ st.markdown("---")
 st.sidebar.title("Menu Navigasi")
 # Sidebar navigasi dengan tombol
 menu_options = {
-    "Dashboard Utama": "📈 Dashboard Utama",
-    "Analisis Penjualan": "📊 Analisis Penjualan",
-    "Manajemen Inventory": "📦 Manajemen Inventory",
-    "Forecasting Demand": "🔮 Forecasting Demand",
-    "Analisis Supplier": "🏭 Analisis Supplier",
-    "Laporan Keuangan": "💰 Laporan Keuangan"
+    "Dashboard Utama": "Dashboard Utama",
+    "Analisis Penjualan": "Analisis Penjualan",
+    "Manajemen Inventory": "Manajemen Inventory",
+    "Forecasting Demand": "Forecasting Demand",
+    "Analisis Supplier": "Analisis Supplier",
+    "Laporan Keuangan": "Laporan Keuangan"
 }
 
 # Simpan menu aktif di session_state
@@ -147,7 +146,7 @@ selected_menu = st.session_state.selected_menu
 
 # Dashboard Utama
 if selected_menu == "Dashboard Utama":
-    st.header("📈 Dashboard Utama")
+    st.header("Dashboard Utama")
     
     # Metrics
     col1, col2, col3, col4 = st.columns(4)
@@ -186,7 +185,7 @@ if selected_menu == "Dashboard Utama":
 
 # Analisis Penjualan
 elif selected_menu == "Analisis Penjualan":
-    st.header("📊 Analisis Penjualan")
+    st.header("Analisis Penjualan")
     
     col1, col2 = st.columns(2)
     
@@ -252,7 +251,7 @@ elif selected_menu == "Analisis Penjualan":
 
 # Manajemen Inventory
 elif selected_menu == "Manajemen Inventory":
-    st.header("📦 Manajemen Inventory")
+    st.header("Manajemen Inventory")
     
     col1, col2 = st.columns(2)
     
@@ -312,7 +311,7 @@ elif selected_menu == "Manajemen Inventory":
 
 # Forecasting Demand
 elif selected_menu == "Forecasting Demand":
-    st.header("🔮 Forecasting Demand")
+    st.header("Forecasting Demand")
     
     st.subheader("Peramalan Permintaan Produk")
     
@@ -528,3 +527,4 @@ st.markdown(
     unsafe_allow_html=True
 
 )
+
