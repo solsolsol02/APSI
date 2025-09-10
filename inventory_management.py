@@ -118,7 +118,7 @@ suppliers_df = data['suppliers']
 purchases_df = data['purchases']
 
 # Judul aplikasi
-st.title("📊 Sistem Manajemen Inventory & PPIC")
+st.title("Sistem Manajemen Inventory & PPIC")
 st.markdown("---")
 
 # Sidebar untuk navigasi
@@ -527,4 +527,5 @@ st.markdown(
     unsafe_allow_html=True
 
 )
+
 
